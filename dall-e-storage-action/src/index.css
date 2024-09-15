@@ -7,30 +7,48 @@
 }
 
 body {
-  font-family: system-ui, "Segoe UI", Roboto, "Helvetica Neue", helvetica,
-    sans-serif;
+  font-family: "Roboto Mono", monospace;
+  background-color: #eae0d5;
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: min(1000px, 95vw);
+  margin: 0 auto;
   padding-top: 1em;
   padding-bottom: 1em;
-  width: min(800px, 95vw);
+}
+
+.intro {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: min(1000px, 95vw);
   margin: 0 auto;
 }
 
 h1 {
   text-align: center;
   margin-bottom: 8px;
-  font-size: 1.8em;
+  font-size: 4em;
   font-weight: 500;
+  margin-top: 20px;
+  color: black;
+}
+
+h3 {
+  margin-bottom: 50px;
+  color: black;
 }
 
 .badge {
   text-align: center;
   margin-bottom: 16px;
+  margin-top: 16px;
 }
 .badge span {
-  background-color: #212529;
+  background-color: #5e503f;
   color: #ffffff;
   border-radius: 6px;
   font-weight: bold;
@@ -51,10 +69,17 @@ h1 {
 }
 
 ul {
-  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  margin-top: 50px;
+  list-style-type: none;
   border-radius: 8px;
   border: solid 1px lightgray;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  background-color: #5e503f;
+  color: white;
 }
 
 ul:empty {
@@ -62,11 +87,13 @@ ul:empty {
 }
 
 li {
-  display: flex;
-  justify-content: flex-start;
+  border-radius: 8px;
+  border: solid 1px lightgray;
+  margin: 10px 0;
   padding: 8px 16px 8px 16px;
   border-bottom: solid 1px lightgray;
   font-size: 16px;
+  width: 40%;
 }
 
 li:last-child {
@@ -77,20 +104,19 @@ li span:nth-child(1) {
   font-weight: bold;
   margin-right: 4px;
   white-space: nowrap;
+  text-align: center;
 }
 li span:nth-child(2) {
   margin-right: 4px;
   word-break: break-word;
-}
-li span:nth-child(3) {
-  color: #6c757d;
-  margin-left: auto;
-  white-space: nowrap;
+  text-align: center;
 }
 
 form {
   display: flex;
   justify-content: center;
+  margin: 20px;
+  color: black;
 }
 
 input:not([type]) {
@@ -109,17 +135,40 @@ button {
   padding: 6px 12px 6px 12px;
   border-radius: 8px;
   font-size: 16px;
-  background-color: rgb(49, 108, 244);
+  background-color: #5e503f;
+}
+
+input::placeholder {
+  color: black;
 }
 
 input[type="submit"]:hover,
 button:hover {
-  background-color: rgb(41, 93, 207);
+  cursor: pointer;
+  background-color: #5e503f;
 }
 
 input[type="submit"]:disabled,
 button:disabled {
-  background-color: rgb(122, 160, 248);
+  background-color: #5e503f;
+}
+
+.cake {
+  display: block;
+  margin: auto;
+  width: 50%;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+.title {
+  padding-top: 10%;
+  text-align: center;
+}
+
+figure {
+  display: flex;
+  justify-content: center;
 }
 
 /* Courtesy of loading.io */

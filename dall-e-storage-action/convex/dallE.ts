@@ -10,7 +10,7 @@ export const send = action(
     if (!apiKey) {
       throw new Error(
         "Add your OPENAI_API_KEY as an env variable in the " +
-          "[dashboard](https://dasboard.convex.dev)",
+          "[dashboard](https://dashboard.convex.dev)",
       );
     }
     const openai = new OpenAI({ apiKey });
@@ -26,9 +26,10 @@ export const send = action(
       );
     }
 
+
     // Query OpenAI for the image.
     const opanaiResponse = await openai.images.generate({
-      prompt,
+      prompt: "image collage with these elements: " + prompt,
       size: "256x256",
     });
     const dallEImageUrl = opanaiResponse.data[0]["url"]!;
